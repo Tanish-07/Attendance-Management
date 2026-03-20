@@ -1,0 +1,41 @@
+<div class="parent">
+  <div class="login-container">
+    <form class="login-form">
+      <h2>Admin Login</h2>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input
+          [(ngModel)]="adminObj.emailId"
+          type="email"
+          id="email"
+          name="emailId"
+          placeholder="Enter admin email"
+          required
+        />
+        <small class="error-message"></small>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input
+          [(ngModel)]="adminObj.password"
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Enter password"
+          required
+        />
+        <small class="error-message"></small>
+      </div>
+
+      <button (click)="onadmin()" type="button" class="submit-btn">
+        Login
+      </button>
+
+      <div class="back-link">
+        <a routerLink="/login/role-select">← Back to role selection</a>
+      </div>
+    </form>
+  </div>
+</div>

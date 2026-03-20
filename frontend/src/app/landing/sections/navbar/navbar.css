@@ -1,0 +1,48 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px 80px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #e6e6e6;
+
+  transition: box-shadow 0.2s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-item {
+  font-size: 14px;
+  font-weight: 400;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover {
+  font-weight: 600;
+  color: #111;
+}
+
+.nav-item.active {
+  font-weight: 600;
+  color: #111;
+}

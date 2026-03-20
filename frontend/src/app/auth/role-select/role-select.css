@@ -1,0 +1,74 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Page wrapper */
+.parent {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card */
+.signup-container.role-box {
+  background-color: #ffffff;
+  width: 380px;
+  padding: 28px 24px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+/* Heading */
+.signup-container h2 {
+  margin-bottom: 24px;
+  color: #333;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Role buttons wrapper */
+.role-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Buttons */
+.role-buttons button {
+  padding: 14px;
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease,
+              box-shadow 0.15s ease;
+}
+
+/* Hover */
+.role-buttons button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Active */
+.role-buttons button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .signup-container.role-box {
+    width: 90%;
+    padding: 24px 18px;
+  }
+}

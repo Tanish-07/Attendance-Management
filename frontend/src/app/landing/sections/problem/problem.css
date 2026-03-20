@@ -1,0 +1,79 @@
+.section.muted {
+  background: #f3f3f3;
+}
+
+/* App title */
+.app-title {
+  color: #111;
+  margin-bottom: 48px;
+}
+
+/* Two-column layout */
+.problem-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+/* LEFT: text stays readable */
+.problem-text {
+  max-width: 620px; /* original readable width */
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.problem-text p {
+  margin-bottom: 16px;
+}
+
+/* RIGHT: feature box */
+.feature-box {
+  flex: 1; /* take remaining space */
+  padding: 32px 36px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Feature box heading */
+.feature-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+/* Horizontal bullets inside box */
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 32px;
+}
+
+.feature-list span {
+  font-size: 14px;
+  color: #333;
+  position: relative;
+  padding-left: 18px;
+}
+
+/* Bullet dot */
+.feature-list span::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .problem-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .problem-text {
+    max-width: 100%;
+  }
+}

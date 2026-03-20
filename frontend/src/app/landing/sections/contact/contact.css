@@ -1,0 +1,101 @@
+/* ===============================
+   Header (aligned with navbar)
+================================ */
+.contact-header {
+  text-align: left;          /* align with BASIC */
+  
+}
+
+.contact-title {
+  color: #111;               /* black heading */
+}
+
+/* 16px gap between heading & subtitle */
+.contact-header .section-title {
+  margin-bottom: 16px;
+}
+
+/* ===============================
+   Layout
+================================ */
+.contact-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 120px;                /* more breathing space */
+}
+
+/* ===============================
+   Left content (form)
+================================ */
+.contact-content {
+  max-width: 560px;          /* wider form area */
+}
+
+.contact-form {
+  width: 200%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+/* Inputs & textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 16px 18px;        /* bigger & premium feel */
+  border: 1px solid #dcdcdc;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+/* Textarea specifics */
+.contact-form textarea {
+  resize: none;
+  height: 150px;
+}
+
+/* Button */
+.contact-form button {
+  width: 112px;
+  margin-top: 12px;
+  border-radius: 18px;
+  align-self: flex-start;
+  text-align: center;
+}
+
+/* ===============================
+   Right image
+================================ */
+.contact-image img {
+      margin-left: 281px;
+    align-items: end;
+    width: 713px;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 900px) {
+  .contact-layout {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+
+  .contact-header {
+    text-align: center;
+  }
+
+  .contact-content {
+    text-align: center;
+  }
+
+  .contact-form button {
+    align-self: center;
+  }
+}
+

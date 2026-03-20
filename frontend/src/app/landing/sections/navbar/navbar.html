@@ -1,0 +1,31 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="nav-left">
+    <span class="logo">BASIC</span>
+  </div>
+
+  <div class="nav-right">
+    <span class="nav-item"
+      [class.active]="activeSection === 'home'"
+      (click)="navigateToSection('home')">Home</span>
+
+    <span class="nav-item"
+      [class.active]="activeSection === 'problem'"
+      (click)="navigateToSection('problem')">Problem</span>
+
+    <span class="nav-item"
+      [class.active]="activeSection === 'solution'"
+      (click)="navigateToSection('solution')">Solution</span>
+
+    <!-- <span class="nav-item"
+      [class.active]="activeSection === 'features'"
+      (click)="navigateToSection('features')">Features</span> -->
+<!-- 
+    <span class="nav-item"
+      [class.active]="activeSection === 'about'"
+      (click)="navigateToSection('about')">About</span> -->
+
+    <span class="nav-item"
+      [class.active]="activeSection === 'contact'"
+      (click)="navigateToSection('contact')">Contact</span>
+  </div>
+</nav>

@@ -1,0 +1,88 @@
+/* ===============================
+   Section title
+================================ */
+#solution .section-title {
+  color: #111; /* make 'Our Solution' clearly visible */
+}
+
+/* ===============================
+   Layout
+================================ */
+.solution-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 48px; /* reduced gap between box and text */
+}
+
+/* ===============================
+   Left: Feature box
+================================ */
+.solution-box {
+  flex: 1; /* take remaining space */
+  padding: 32px 36px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Box heading */
+.solution-box-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+/* Feature list */
+.solution-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.solution-features li {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 12px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.solution-features li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #111;
+}
+
+/* ===============================
+   Right: Solution text
+================================ */
+.solution-text {
+  max-width: 800px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.solution-text p {
+  margin-bottom: 16px;
+}
+
+/* ===============================
+   Responsive
+================================ */
+@media (max-width: 900px) {
+  .solution-layout {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .solution-box {
+    max-width: 100%;
+  }
+
+  .solution-text {
+    max-width: 100%;
+  }
+}

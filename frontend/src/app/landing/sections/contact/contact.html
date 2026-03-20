@@ -1,0 +1,41 @@
+<section id="contact" class="section muted">
+  <div class="section-inner">
+
+    <!-- CENTER TITLE -->
+    <div class="contact-header">
+      <h2 class="section-title contact-title">Contact Us</h2>
+      <p class="section-subtitle">
+        Any question or remarks? Let us know!
+      </p>
+    </div>
+
+    <!-- CONTENT ROW -->
+    <div class="contact-layout">
+
+      <!-- LEFT FORM -->
+      <div class="contact-content">
+        <form class="contact-form">
+          <input type="text"
+            [(ngModel)]="contactObj.fullName" 
+            name="fullName"
+            placeholder="Enter your name" />
+          <input type="email" 
+            [(ngModel)]="contactObj.emailId"
+            name="emailId"
+            placeholder="Enter your email" />
+          <textarea 
+            [(ngModel)]="contactObj.message"
+            name="message"
+            placeholder="Type your message here"></textarea>
+          <button (click)="submitContactForm()" class="primary rounded-btn">Submit</button>
+        </form>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="contact-image">
+        <img src="images/world.png" alt="Contact illustration">
+      </div>
+
+    </div>
+  </div>
+</section>

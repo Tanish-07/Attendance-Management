@@ -1,0 +1,81 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background-color: #f8f8f8;
+  color: #111;
+  line-height: 1.6;
+}
+
+/* Sections */
+.section {
+  padding: 120px 80px;
+}
+
+.section-inner {
+  max-width: 1200px;
+}
+
+/* IMPORTANT: correct offset for sticky navbar */
+section {
+  scroll-margin-top: 96px;
+}
+
+.section.muted {
+  background-color: #f2f2f2;
+}
+
+/* Typography */
+.section-title {
+  font-size: 48px;
+  font-weight: 300;
+  color: #c4c4c4;
+  margin-bottom: 32px;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  color: #555;
+  max-width: 620px;
+}
+
+.text-muted {
+  color: #777;
+  line-height: 1.7;
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.primary {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+}
+
+.outline {
+  background: transparent;
+  border: 1px solid #111;
+  padding: 12px 28px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section {
+    padding: 80px 24px;
+  }
+
+  .section-title {
+    font-size: 36px;
+  }
+}
