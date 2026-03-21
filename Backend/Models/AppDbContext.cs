@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Backend.Models;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -14,6 +15,22 @@ namespace Backend.Model
         public DbSet<SignUp> SaveSignUp { get; set; }
 
         public DbSet<adminLogin> AdminLogins { get; set; }
+
+        public DbSet<Class> Classes { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<TeacherClass> TeacherClasses { get; set; }
+        public DbSet<Attendance> Attendances { get; set; }
+
+        // Configure unique constraint for Attendance
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Attendance>()
+                .HasIndex(a => new { a.StudentId, a.SubjectId, a.AttendanceDate })
+                .IsUnique();
+        }
 
 
         //ContactMessage Table
